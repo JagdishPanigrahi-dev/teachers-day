@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Teachers' Day — Govt. High School, Chintamaniswar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --board: #1f3d34;
+    --board-dark: #16302a;
+    --chalk: #f2ede0;
+    --paper: #fbf6ea;
+    --paper-line: #c9d6e8;
+    --marigold: #e6a23c;
+    --marigold-dark: #c9822a;
+    --maroon: #7a2e2e;
+    --ink: #2b2b26;
+    --muted: #6f6a5c;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Poppins', sans-serif;
+    font-weight:300;
+    line-height:1.7;
+    overflow-x:hidden;
+  }
+  h1,h2,h3, .hand{
+    font-family:'Kalam', cursive;
+    font-weight:700;
+  }
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+
+  /* ---------- HERO / BLACKBOARD ---------- */
+  .board{
+    min-height:100svh;
+    background:
+      radial-gradient(ellipse at 20% 20%, rgba(255,255,255,0.03), transparent 40%),
+      radial-gradient(ellipse at 80% 70%, rgba(255,255,255,0.025), transparent 45%),
+      var(--board);
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:8vh 6vw 12vh;
+    border-bottom:14px solid #6b4a2e;
+  }
+  .board::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.015) 0px, rgba(255,255,255,0.015) 1px, transparent 1px, transparent 3px);
+    pointer-events:none;
+  }
+  .chalk-eyebrow{
+    color:var(--marigold);
+    font-family:'Kalam', cursive;
+    font-size:clamp(1rem, 2vw, 1.3rem);
+    letter-spacing:0.02em;
+    margin:0 0 0.6rem;
+    opacity:0.95;
+  }
+  .board h1{
+    color:var(--chalk);
+    font-size:clamp(2.3rem, 7vw, 5rem);
+    line-height:1.08;
+    margin:0 0 0.5rem;
+    text-shadow: 0 0 1px rgba(255,255,255,0.15);
+  }
+  .board h1 span{color:var(--marigold);}
+  .school-name{
+    color:var(--chalk);
+    font-family:'Poppins',sans-serif;
+    font-weight:500;
+    font-size:clamp(1rem, 2.6vw, 1.4rem);
+    letter-spacing:0.03em;
+    opacity:0.9;
+    margin:0.8rem 0 0.2rem;
+  }
+  .school-loc{
+    color:#b9c9c0;
+    font-size:0.95rem;
+    margin:0 0 0.4rem;
+  }
+  .hero-request{
+    color:var(--marigold);
+    font-family:'Kalam',cursive;
+    font-size:clamp(0.95rem,2vw,1.15rem);
+    max-width:480px;
+    margin:0.6rem auto 1.6rem;
+    line-height:1.5;
+    opacity:0.95;
+  }
+  .duster-line{
+    width:120px;height:3px;background:var(--marigold);
+    border-radius:3px;margin:0.4rem auto 2rem;opacity:0.8;
+  }
+  .scroll-hint{
+    color:#a9bdb3;
+    font-size:0.85rem;
+    display:flex;flex-direction:column;align-items:center;gap:6px;
+  }
+  .scroll-hint span{
+    width:1px;height:26px;background:#a9bdb3;
+    animation:pulldown 1.8s ease-in-out infinite;
+  }
+  @keyframes pulldown{
+    0%{transform:scaleY(0);transform-origin:top;opacity:0;}
+    40%{transform:scaleY(1);transform-origin:top;opacity:1;}
+    100%{transform:scaleY(1);transform-origin:bottom;opacity:0;}
+  }
+  .chalk-dust{position:absolute;border-radius:50%;background:rgba(242,237,224,0.55);pointer-events:none;}
+
+  /* ---------- SECTION WRAPPER ---------- */
+  section{padding:5.5rem 6vw;}
+  .section-inner{max-width:820px;margin:0 auto;}
+  .kicker{
+    font-family:'Kalam',cursive;
+    color:var(--maroon);
+    font-size:1.1rem;
+    margin:0 0 0.3rem;
+  }
+
+  /* ---------- ALUMNUS LETTER (notebook page) ---------- */
+  .letter-wrap{
+    background:var(--paper);
+    display:flex;justify-content:center;
+    padding-top:1rem;
+  }
+  .notebook{
+    position:relative;
+    max-width:680px;
+    width:100%;
+    background:
+      linear-gradient(var(--paper) 0 0);
+    background-color:#fffef9;
+    background-image:
+      repeating-linear-gradient(white 0 0),
+      repeating-linear-gradient(transparent 0, transparent 34px, var(--paper-line) 34px, var(--paper-line) 35px);
+    background-size:100% 35px;
+    padding:3rem 3.2rem 3rem 4.2rem;
+    box-shadow:0 18px 40px -18px rgba(0,0,0,0.25), 0 2px 0 rgba(0,0,0,0.04);
+    border-radius:2px;
+    transform:rotate(-0.6deg);
+  }
+  .notebook::before{
+    content:"";
+    position:absolute; left:2.1rem; top:0; bottom:0; width:2px;
+    background:var(--maroon); opacity:0.35;
+  }
+  .notebook h2{color:var(--maroon);font-size:1.7rem;margin:0 0 1.1rem;}
+  .notebook p{margin:0 0 1rem; color:#3a362c;}
+  .signoff{
+    font-family:'Kalam',cursive;
+    font-size:1.3rem;
+    color:var(--ink);
+    margin-top:1.6rem;
+  }
+  .signoff small{display:block;font-family:'Poppins',sans-serif;font-size:0.78rem;color:var(--muted);margin-top:0.2rem;}
+
+  /* ---------- WHY SEPT 5 ---------- */
+  .why{background:var(--board-dark);color:var(--chalk);}
+  .why .section-inner{text-align:center;}
+  .why .kicker{color:var(--marigold);}
+  .why h2{font-size:clamp(1.6rem,3.6vw,2.3rem);margin:0 0 1rem;color:var(--chalk);}
+  .why p{color:#cfd8d1;max-width:640px;margin:0 auto;}
+  .shloka{
+    margin-top:2.2rem;
+    font-family:'Kalam',cursive;
+    color:var(--marigold);
+    font-size:clamp(1.1rem,2.4vw,1.4rem);
+    line-height:1.9;
+  }
+  .shloka span{display:block;color:#9fb3a8;font-size:0.85rem;font-family:'Poppins',sans-serif;margin-top:0.6rem;}
+
+  /* ---------- MEMORY TIMELINE ---------- */
+  .timeline{background:var(--paper);}
+  .timeline .section-inner{max-width:760px;}
+  .timeline-head{text-align:center;margin-bottom:3rem;}
+  .timeline-head h2{font-size:clamp(1.7rem,4vw,2.4rem);margin:0.2rem 0;}
+  .tl-item{
+    display:grid;
+    grid-template-columns:64px 1fr;
+    gap:1.2rem;
+    position:relative;
+    padding-bottom:2.6rem;
+  }
+  .tl-item:last-child{padding-bottom:0;}
+  .tl-item::before{
+    content:"";
+    position:absolute;
+    left:31px; top:52px; bottom:-6px;
+    width:2px;
+    background:repeating-linear-gradient(to bottom, var(--paper-line) 0 6px, transparent 6px 11px);
+  }
+  .tl-item:last-child::before{display:none;}
+  .tl-num{
+    width:56px;height:56px;border-radius:50%;
+    background:var(--maroon);color:var(--chalk);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Kalam',cursive;font-size:1.3rem;
+    flex-shrink:0;
+  }
+  .tl-body h3{margin:0.15rem 0 0.3rem;font-size:1.2rem;color:var(--maroon);}
+  .tl-body p{margin:0;color:var(--muted);font-size:0.95rem;}
+
+  /* ---------- TWO DAYS ---------- */
+  .two-days{background:var(--board-dark);color:var(--chalk);}
+  .two-days .kicker{color:var(--marigold);}
+  .two-days-head{text-align:center;margin-bottom:3rem;}
+  .two-days-head h2{font-size:clamp(1.7rem,4vw,2.4rem);margin:0.2rem 0;color:var(--chalk);}
+  .days-row{
+    display:grid;
+    grid-template-columns:1fr auto 1fr;
+    gap:2rem;
+    align-items:center;
+    max-width:920px;
+    margin:0 auto 2.4rem;
+  }
+  .day-card{
+    background:rgba(242,237,224,0.06);
+    border:1px solid rgba(242,237,224,0.18);
+    border-radius:8px;
+    padding:2rem 1.6rem;
+    text-align:center;
+  }
+  .day-card .tear{font-size:1.8rem;margin-bottom:0.6rem;}
+  .day-card h3{font-family:'Kalam',cursive;color:var(--marigold);font-size:1.4rem;margin:0 0 0.7rem;}
+  .day-card p{color:#cfd8d1;font-size:0.95rem;margin:0;}
+  .days-link{
+    font-family:'Kalam',cursive;
+    color:var(--marigold);
+    font-size:2.2rem;
+    text-align:center;
+  }
+  .two-days-note{
+    max-width:640px;margin:0 auto;text-align:center;
+    color:#d7ddd3;font-size:1.02rem;
+  }
+  .two-days-note b{color:var(--marigold);font-weight:500;}
+  @media (max-width:700px){
+    .days-row{grid-template-columns:1fr; gap:1rem;}
+    .days-link{transform:rotate(90deg);margin:0.4rem auto;}
+  }
+
+  /* ---------- STICKY NOTE WALL ---------- */
+  .wall{background:#eef0e6;}
+  .wall-head{text-align:center;margin-bottom:2.6rem;}
+  .wall-head h2{font-size:clamp(1.7rem,4vw,2.4rem);margin:0.2rem 0;}
+  .wall-head p{color:var(--muted);max-width:520px;margin:0.6rem auto 0;}
+  .notes-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+    gap:1.4rem;
+    max-width:980px;
+    margin:0 auto;
+  }
+  .note{
+    padding:1.4rem 1.3rem 1.6rem;
+    font-family:'Kalam',cursive;
+    font-size:1.05rem;
+    line-height:1.5;
+    box-shadow:0 10px 20px -10px rgba(0,0,0,0.28);
+    min-height:140px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+  }
+  .note b{display:block;margin-top:0.9rem;font-size:0.85rem;font-family:'Poppins',sans-serif;font-weight:500;opacity:0.75;}
+  .note.n1{background:#f7d774; transform:rotate(-3deg); color:#4a3c0d;}
+  .note.n2{background:#f4a99b; transform:rotate(2.5deg); color:#5a2318;}
+  .note.n3{background:#a9c9a4; transform:rotate(-1.5deg); color:#264423;}
+  .note.n4{background:#9fc1d9; transform:rotate(3deg); color:#1c3e52;}
+  .note.n5{background:#d9b3d9; transform:rotate(-2deg); color:#4a1f4a;}
+  .note.n6{background:#f0c288; transform:rotate(1.8deg); color:#5a3a10;}
+  .note:hover{transform:rotate(0deg) scale(1.03); transition:transform 0.25s ease;}
+
+  /* ---------- QUOTE / REGISTER ---------- */
+  .register{
+    background:var(--paper);
+    text-align:center;
+  }
+  .register blockquote{
+    max-width:680px;margin:0 auto;
+    font-family:'Kalam',cursive;
+    font-size:clamp(1.3rem,3vw,1.8rem);
+    color:var(--maroon);
+    line-height:1.6;
+  }
+  .register cite{
+    display:block;
+    margin-top:1rem;
+    font-family:'Poppins',sans-serif;
+    font-style:normal;
+    font-size:0.85rem;
+    color:var(--muted);
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    background:var(--board);
+    color:#b9c9c0;
+    text-align:center;
+    padding:3rem 6vw 2.4rem;
+    font-size:0.85rem;
+  }
+  footer .hand{color:var(--marigold);font-size:1.4rem;margin-bottom:0.6rem;}
+  footer .fine{margin-top:0.8rem;opacity:0.7;font-size:0.75rem;}
+
+  @media (max-width:600px){
+    .notebook{padding:2.4rem 1.6rem 2.4rem 2.6rem;}
+    section{padding:4rem 5vw;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important; transition:none !important;}
+  }
+
+  /* ---------- BEGIN BUTTON ---------- */
+  .begin-btn{
+    position:relative;
+    z-index:70;
+    margin-top:0.6rem;
+    display:inline-flex;
+    align-items:center;
+    gap:0.6rem;
+    background:transparent;
+    color:var(--chalk);
+    border:2px solid var(--marigold);
+    padding:0.85rem 1.7rem;
+    border-radius:999px;
+    font-family:'Kalam',cursive;
+    font-size:1.05rem;
+    cursor:pointer;
+    box-shadow:0 0 0 rgba(230,162,60,0.4);
+    animation:beginPulse 2.2s ease-in-out infinite;
+    transition:background 0.25s ease, transform 0.2s ease, color 0.25s ease;
+  }
+  .begin-btn:hover{background:var(--marigold); color:var(--board-dark); transform:translateY(-2px);}
+  .begin-btn .arrow{display:inline-block; animation:arrowDrop 1.4s ease-in-out infinite;}
+  .begin-btn.gone{
+    opacity:0; transform:scale(0.9) translateY(6px);
+    pointer-events:none;
+    transition:opacity 0.5s ease, transform 0.5s ease;
+  }
+  @keyframes beginPulse{
+    0%,100%{box-shadow:0 0 0 0 rgba(230,162,60,0.35);}
+    50%{box-shadow:0 0 0 10px rgba(230,162,60,0);}
+  }
+  @keyframes arrowDrop{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(5px);}
+  }
+
+  /* ---------- CONFETTI ---------- */
+  #confettiCanvas{
+    position:fixed; inset:0; z-index:60;
+    pointer-events:none;
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="board" id="board">
+  <p class="chalk-eyebrow">5th September</p>
+  <h1 class="hand">Happy Teachers' <span>Day</span></h1>
+  <p class="school-name">Govt. High School, Chintamaniswar</p>
+  <p class="school-loc">Bhubaneswar, Odisha</p>
+  <p class="hero-request">A small request — please read everything on this page, slowly. It was written for you.</p>
+  <div class="duster-line"></div>
+  <button class="begin-btn" id="beginBtn" onclick="beginExperience()">Click here to begin <span class="arrow">↓</span></button>
+</div>
+
+<canvas id="confettiCanvas"></canvas>
+
+<!-- ALUMNUS LETTER -->
+<div class="letter-wrap">
+  <section style="padding-top:0; padding-bottom:0;">
+    <div class="notebook">
+      <h2 class="hand">From a Class of 10th, still yours,</h2>
+      <p>It's strange how a school gate you walked through every morning for years can still show up in your dreams. The chalk-green boards, the roll number you knew by heart, the bell that decided when we ran and when we sat still — none of it left, really. It just moved somewhere quieter, inside.</p>
+      <p>I passed out of 10th standard from this school, and every Teachers' Day since, I find myself thinking less about the syllabus and more about the people who taught it. The ones who stayed back to explain one more sum. The ones who scolded us because they expected better, not because they enjoyed it. The ones who remembered our names even in a school full of them.</p>
+      <p>This little page is for them — and for every student, past or present, who owes a small, permanent part of who they are to a teacher at Chintamaniswar.</p>
+      <p class="signoff">— Jagdish
+        <small>Govt. High School, Chintamaniswar · Batch of 10th</small>
+      </p>
+    </div>
+  </section>
+</div>
+
+<!-- WHY TEACHERS DAY -->
+<section class="why">
+  <div class="section-inner">
+    <p class="kicker hand">Why today?</p>
+    <h2>September 5th belongs to a teacher who became a President</h2>
+    <p>India celebrates Teachers' Day on the birthday of Dr. Sarvepalli Radhakrishnan — a philosopher and teacher who went on to become the country's President. When his students once wanted to celebrate his birthday, he asked them to observe the day in honour of all teachers instead. That request is why classrooms across the country, including ours, pause today to say thank you.</p>
+    <div class="shloka">
+      गुरुर्ब्रह्मा गुरुर्विष्णुः गुरुर्देवो महेश्वरः।<br>
+      गुरुः साक्षात् परब्रह्म तस्मै श्री गुरवे नमः॥
+      <span>An ancient verse placing the teacher alongside the divine — a reminder of how deeply this idea runs in our culture.</span>
+    </div>
+  </div>
+</section>
+
+<!-- MEMORY TIMELINE -->
+<section class="timeline">
+  <div class="section-inner">
+    <div class="timeline-head">
+      <p class="kicker hand">Memory lane</p>
+      <h2>Class 1 to Class 10, in six moments</h2>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-num">1</div>
+      <div class="tl-body">
+        <h3>The first day, the wrong classroom</h3>
+        <p>Someone always walked in with a bag too big for them, and a teacher who didn't laugh — just pointed the way.</p>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-num">2</div>
+      <div class="tl-body">
+        <h3>The homework not done</h3>
+        <p>And the teacher who noticed, asked why, and somehow made you want to actually do it the next time.</p>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-num">3</div>
+      <div class="tl-body">
+        <h3>The subject you were sure you hated</h3>
+        <p>Until one teacher explained it differently, and it quietly became the one you looked forward to.</p>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-num">4</div>
+      <div class="tl-body">
+        <h3>The scolding that stung, briefly</h3>
+        <p>The kind that came from someone who clearly expected more from you than you expected from yourself.</p>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-num">5</div>
+      <div class="tl-body">
+        <h3>The exam nobody thought they'd clear</h3>
+        <p>And extra classes that weren't really in anyone's job description.</p>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-num">6</div>
+      <div class="tl-body">
+        <h3>The last day of Class 10</h3>
+        <p>When the same corridors that felt endless suddenly felt too short, and goodbye was harder than any paper we sat for.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TWO DAYS -->
+<section class="two-days">
+  <div class="section-inner">
+    <div class="two-days-head">
+      <p class="kicker hand">Two days, a lifetime between them</p>
+      <h2>The day I walked in, and the day I walked out</h2>
+    </div>
+    <div class="days-row">
+      <div class="day-card">
+        <div class="tear">😢</div>
+        <h3>Day One</h3>
+        <p>A tiny boy named Jagdish, holding onto his bag straps a little too tight, crying at the school gate — not ready to let go of home for a whole day.</p>
+      </div>
+      <div class="days-link hand">↔</div>
+      <div class="day-card">
+        <div class="tear">😢</div>
+        <h3>The Last Day</h3>
+        <p>The same Jagdish, ten years older, crying again at that very gate — this time not ready to let go of the school that had quietly become home.</p>
+      </div>
+    </div>
+    <p class="two-days-note">Between those two days of tears lies an entire world — <b>lessons learned, friendships made, teachers who shaped us, and a thousand small memories</b> we didn't know we were collecting at the time. It is a world we, the students of Govt. High School Chintamaniswar, can never forget.</p>
+  </div>
+</section>
+
+<!-- STICKY NOTE WALL -->
+<section class="wall">
+  <div class="wall-head">
+    <p class="kicker hand">The thank-you wall</p>
+    <h2>Little things, said out loud for once</h2>
+    <p>Some of the small, specific reasons students at Chintamaniswar remember their teachers.</p>
+  </div>
+  <div class="notes-grid" id="notesGrid">
+    <div class="note n1">"For the extra ten minutes after the bell, every single time I didn't get it."<b>— Class of 10th</b></div>
+    <div class="note n2">"For pretending not to notice when I copied, and making sure I couldn't next time."<b>— Class 9 student</b></div>
+    <div class="note n3">"For saying my name right, when almost nobody else in a class of sixty did."<b>— Class of 10th</b></div>
+    <div class="note n4">"For the one line in my answer sheet that said 'good effort' — I still remember it."<b>— Class 8 student</b></div>
+    <div class="note n5">"For not giving up on the back-bench kids. Especially us."<b>— Class of 10th</b></div>
+    <div class="note n6">"For teaching maths like it was a story, not a punishment."<b>— Class 10 student</b></div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section class="register">
+  <div class="section-inner">
+    <blockquote class="hand">
+      "A teacher affects eternity; they can never tell where their influence stops."
+      <cite>Written on the last page of a hundred school diaries, in a hundred different hands.</cite>
+    </blockquote>
+  </div>
+</section>
+
+<footer>
+  <p class="hand">With gratitude, from every student who ever sat in these classrooms.</p>
+  <p>Govt. High School, Chintamaniswar · Bhubaneswar, Odisha</p>
+  <p class="fine">Made for Teachers' Day, 5th September — by an alumnus who never really left.</p>
+  <p class="fine">Whole site built with love by Jagdish 🧡</p>
+</footer>
+
+<script>
+  // ---------- A proper little tune (no external files, fully generative) ----------
+  let audioCtx, masterGain, reverbSend, padVoices = [], bassOsc, chordTimer, melodyTimer;
+  let musicPlaying = false, chordIndex = 0, stepIndex = 0;
+
+  // a gentle, nostalgic progression: Cadd9 - Am7 - Fmaj7 - Gsus4
+  const progression = [
+    [261.63, 329.63, 392.00, 587.33],   // Cadd9  (C4 E4 G4 D5)
+    [220.00, 261.63, 329.63, 392.00],   // Am7    (A3 C4 E4 G4)
+    [174.61, 220.00, 261.63, 329.63],   // Fmaj7  (F3 A3 C4 E4)
+    [196.00, 261.63, 293.66, 392.00],   // Gsus4  (G3 C4 D4 G4)
+  ];
+  const bassRoots = [130.81, 110.00, 87.31, 98.00]; // C3 A2 F2 G2
+
+  // a fixed, hummable little melody in C pentatonic — repeats under the shifting chords
+  const C5=523.25, D5=587.33, E5=659.25, G5=783.99, A5=880.00;
+  const melodyPattern = [
+    E5, G5, A5, null, G5, E5, D5, null,
+    C5, D5, E5, null, G5, A5, G5, null
+  ];
+  const stepSeconds = 0.42; // ~70bpm eighth notes, unhurried and calm
+
+  function makeReverbImpulse(ctx, seconds, decay){
+    const rate = ctx.sampleRate;
+    const length = rate * seconds;
+    const impulse = ctx.createBuffer(2, length, rate);
+    for(let ch=0; ch<2; ch++){
+      const data = impulse.getChannelData(ch);
+      for(let i=0; i<length; i++){
+        data[i] = (Math.random()*2-1) * Math.pow(1 - i/length, decay);
+      }
+    }
+    return impulse;
+  }
+
+  function buildAudioGraph(){
+    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+    // master bus: gentle compressor for glue, then out
+    masterGain = audioCtx.createGain();
+    masterGain.gain.value = 0.0;
+    const compressor = audioCtx.createDynamicsCompressor();
+    compressor.threshold.value = -22;
+    compressor.knee.value = 24;
+    compressor.ratio.value = 3;
+    compressor.attack.value = 0.02;
+    compressor.release.value = 0.3;
+    const masterFilter = audioCtx.createBiquadFilter();
+    masterFilter.type = 'lowpass';
+    masterFilter.frequency.value = 4200;
+    masterGain.connect(masterFilter).connect(compressor).connect(audioCtx.destination);
+
+    // reverb send (soft room, gives everything space & warmth)
+    const convolver = audioCtx.createConvolver();
+    convolver.buffer = makeReverbImpulse(audioCtx, 2.4, 2.4);
+    reverbSend = audioCtx.createGain();
+    reverbSend.gain.value = 0.4;
+    reverbSend.connect(convolver).connect(masterGain);
+
+    const dryBus = audioCtx.createGain();
+    dryBus.gain.value = 0.95;
+    dryBus.connect(masterGain);
+
+    // --- soft pad underneath: 3 detuned voices per chord tone ---
+    const padGain = audioCtx.createGain();
+    padGain.gain.value = 0.04;
+
+    const padFilter = audioCtx.createBiquadFilter();
+    padFilter.type = 'lowpass';
+    padFilter.frequency.value = 1200;
+    padGain.connect(padFilter);
+    padFilter.connect(dryBus);
+    padFilter.connect(reverbSend);
+
+    const filterLfo = audioCtx.createOscillator();
+    filterLfo.frequency.value = 0.05;
+    const filterLfoGain = audioCtx.createGain();
+    filterLfoGain.gain.value = 300;
+    filterLfo.connect(filterLfoGain).connect(padFilter.frequency);
+    filterLfo.start();
+
+    progression[0].forEach((freq)=>{
+      [1, 1.003, 0.997].forEach((detune)=>{
+        const osc = audioCtx.createOscillator();
+        osc.type = 'sine';
+        osc.frequency.value = freq * detune;
+        osc.connect(padGain);
+        osc.start();
+        padVoices.push(osc);
+      });
+    });
+
+    const breathe = audioCtx.createOscillator();
+    breathe.frequency.value = 0.07;
+    const breatheGain = audioCtx.createGain();
+    breatheGain.gain.value = 0.015;
+    breathe.connect(breatheGain).connect(padGain.gain);
+    breathe.start();
+
+    // --- soft sub bass, follows the chord root ---
+    bassOsc = audioCtx.createOscillator();
+    bassOsc.type = 'sine';
+    bassOsc.frequency.value = bassRoots[0];
+    const bassGain = audioCtx.createGain();
+    bassGain.gain.value = 0.07;
+    bassOsc.connect(bassGain).connect(dryBus);
+    bassOsc.start();
+
+    // move gently through the progression, one chord per melody loop (16 steps)
+    chordTimer = setInterval(()=>{
+      chordIndex = (chordIndex + 1) % progression.length;
+      const now = audioCtx.currentTime;
+      progression[chordIndex].forEach((freq, noteI)=>{
+        for(let v=0; v<3; v++){
+          const voice = padVoices[noteI*3 + v];
+          const detune = [1, 1.003, 0.997][v];
+          voice.frequency.setTargetAtTime(freq*detune, now, 3.2);
+        }
+      });
+      bassOsc.frequency.setTargetAtTime(bassRoots[chordIndex], now, 3.2);
+    }, melodyPattern.length * stepSeconds * 1000);
+
+    // --- a real little tune: warm plucked notes following a fixed, gentle melody ---
+    function pluckNote(freq){
+      const now = audioCtx.currentTime;
+      const osc = audioCtx.createOscillator();
+      osc.type = 'triangle';
+      osc.frequency.value = freq;
+      const noteFilter = audioCtx.createBiquadFilter();
+      noteFilter.type = 'lowpass';
+      noteFilter.frequency.setValueAtTime(3200, now);
+      noteFilter.frequency.exponentialRampToValueAtTime(700, now + 1.1);
+      const g = audioCtx.createGain();
+      g.gain.setValueAtTime(0, now);
+      g.gain.linearRampToValueAtTime(0.07, now + 0.012);
+      g.gain.exponentialRampToValueAtTime(0.0001, now + 1.3);
+      osc.connect(noteFilter).connect(g);
+      if(audioCtx.createStereoPanner){
+        const pan = audioCtx.createStereoPanner();
+        pan.pan.value = (Math.random()*0.8-0.4);
+        g.connect(pan);
+        pan.connect(dryBus);
+        pan.connect(reverbSend);
+      } else {
+        g.connect(dryBus);
+        g.connect(reverbSend);
+      }
+      osc.start(now);
+      osc.stop(now + 1.4);
+    }
+    melodyTimer = setInterval(()=>{
+      if(!musicPlaying) return;
+      const note = melodyPattern[stepIndex % melodyPattern.length];
+      if(note) pluckNote(note);
+      stepIndex++;
+    }, stepSeconds * 1000);
+  }
+
+  function startMusic(){
+    if(!audioCtx){ buildAudioGraph(); }
+    audioCtx.resume();
+    musicPlaying = true;
+    masterGain.gain.cancelScheduledValues(audioCtx.currentTime);
+    masterGain.gain.linearRampToValueAtTime(0.85, audioCtx.currentTime + 2.0);
+  }
+
+  // ---------- Confetti burst, like a party popper going off ----------
+  function launchConfetti(){
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const canvas = document.getElementById('confettiCanvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const colors = ['#e6a23c','#f7d774','#f4a99b','#a9c9a4','#9fc1d9','#d9b3d9','#f2ede0'];
+    const origins = [
+      {x: canvas.width*0.06, y: canvas.height*0.95, dir: -1},
+      {x: canvas.width*0.94, y: canvas.height*0.95, dir: 1}
+    ];
+    let particles = [];
+    origins.forEach(o=>{
+      for(let i=0;i<70;i++){
+        const angle = (Math.PI/2) + o.dir*(Math.random()*0.9 - 0.1);
+        const speed = 9 + Math.random()*10;
+        particles.push({
+          x:o.x, y:o.y,
+          vx: Math.cos(angle)*speed*o.dir*-1 + (Math.random()*2-1),
+          vy: -Math.sin(angle)*speed - Math.random()*4,
+          size: 5 + Math.random()*5,
+          color: colors[Math.floor(Math.random()*colors.length)],
+          rot: Math.random()*360,
+          vr: (Math.random()*10-5),
+          life: 0,
+          maxLife: 90 + Math.random()*40
+        });
+      }
+    });
+
+    let frame = 0;
+    function tick(){
+      frame++;
+      ctx.clearRect(0,0,canvas.width,canvas.height);
+      let alive = false;
+      particles.forEach(p=>{
+        if(p.life > p.maxLife) return;
+        alive = true;
+        p.vy += 0.28; // gravity
+        p.x += p.vx;
+        p.y += p.vy;
+        p.rot += p.vr;
+        p.life++;
+        const fade = Math.max(0, 1 - p.life/p.maxLife);
+        ctx.save();
+        ctx.translate(p.x, p.y);
+        ctx.rotate(p.rot*Math.PI/180);
+        ctx.globalAlpha = fade;
+        ctx.fillStyle = p.color;
+        ctx.fillRect(-p.size/2, -p.size/2, p.size, p.size*0.6);
+        ctx.restore();
+      });
+      if(alive){
+        requestAnimationFrame(tick);
+      } else {
+        ctx.clearRect(0,0,canvas.width,canvas.height);
+      }
+    }
+    tick();
+  }
+
+  // ---------- The one button: starts music, pops confetti, nudges the page down ----------
+  let hasBegun = false;
+  function beginExperience(){
+    if(hasBegun) return;
+    hasBegun = true;
+    const btn = document.getElementById('beginBtn');
+    startMusic();
+    launchConfetti();
+    btn.classList.add('gone');
+    window.scrollBy({top: window.innerHeight * 0.85, behavior:'smooth'});
+  }
+
+  // ---------- Make sure the music actually stops: tab hidden, backgrounded, or page closed ----------
+  let wasPlayingBeforeHide = false;
+  function killAudioHard(){
+    if(!audioCtx) return;
+    wasPlayingBeforeHide = musicPlaying;
+    musicPlaying = false;
+    try{
+      if(masterGain){
+        masterGain.gain.cancelScheduledValues(audioCtx.currentTime);
+        masterGain.gain.setValueAtTime(0, audioCtx.currentTime);
+      }
+      audioCtx.suspend();
+    }catch(e){ /* ignore */ }
+  }
+
+  document.addEventListener('visibilitychange', ()=>{
+    if(document.hidden){
+      killAudioHard();
+    } else if(wasPlayingBeforeHide && audioCtx){
+      audioCtx.resume();
+      musicPlaying = true;
+      masterGain.gain.cancelScheduledValues(audioCtx.currentTime);
+      masterGain.gain.linearRampToValueAtTime(0.85, audioCtx.currentTime + 1.2);
+    }
+  });
+  window.addEventListener('pagehide', killAudioHard);
+  window.addEventListener('beforeunload', killAudioHard);
+
+  // subtle one-time chalk dust drift on the hero, respecting reduced motion
+  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    const board = document.getElementById('board');
+    for(let i=0;i<18;i++){
+      const d = document.createElement('div');
+      d.className = 'chalk-dust';
+      const size = Math.random()*3+1;
+      d.style.width = size+'px';
+      d.style.height = size+'px';
+      d.style.left = Math.random()*100+'%';
+      d.style.top = Math.random()*100+'%';
+      d.style.opacity = (Math.random()*0.4+0.1).toFixed(2);
+      board.appendChild(d);
+    }
+  }
+</script>
+
+</body>
+</html>
